@@ -40,6 +40,7 @@ const Wrapper = styled.div`
 const Left = styled.div`
 	display: flex;
 	align-items: center;	
+	font-weight: 400;
 `
 
 const Right = styled.div`
@@ -50,11 +51,11 @@ const Right = styled.div`
 
 	svg {
 		height: 24px;
-		fill: ${ p => p.theme.blue};
+		fill: ${ p => p.theme.link };
 		transition: fill 150ms ease-in-out;
 
 		&:hover {
-			fill: ${ p => p.theme.green };
+			fill: ${ p => p.theme.linkHover };
 		}
 	}
 `

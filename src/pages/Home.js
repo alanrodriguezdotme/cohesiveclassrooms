@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ContactForm from '../components/ContactForm'
 
 import content from '../content'
+import { colors } from '../themes'
 
 const Home = () => {
 	let { homepageContent } = content
@@ -11,8 +12,8 @@ const Home = () => {
 	function renderOurApproachBuckets(buckets) {
 		return buckets.map((bucket, i) => {
 			return (
-				<Bucket key={ 'bucket' + i }>
-					<h3 className={ bucket.color }>{ bucket.title }</h3>
+				<Bucket color={ colors[bucket.color] } key={ 'bucket' + i }>
+					<h3>{ bucket.title }</h3>
 					<Text>{ bucket.text }</Text>
 				</Bucket>
 			)
@@ -27,12 +28,12 @@ const Home = () => {
 						<img alt="graduation cap" src={ "images/" + hero.image } />
 					</Side>
 					<Side>
-						<h1 className="blue">{ hero.title }</h1>
+						<h1>{ hero.title }</h1>
 					</Side>
 				</Row>
 				<Row>
 					<Side>
-						<h2 className="blue">{ whatWeDo.title }</h2>
+						<h2>{ whatWeDo.title }</h2>
 						<Text>{ whatWeDo.text }</Text>
 					</Side>
 					<Side>
@@ -55,7 +56,10 @@ const Home = () => {
 						<img className="mail" alt="mail" src={ "images/" + findOutMore.image } />
 					</Side>
 					<Side>
-						<ContactForm />
+						<ContactForm
+							showMessage={ true }
+							textColor='blue'
+							templateID='template_e1p1led' />
 					</Side>
 				</Row>
 			</Wrapper>
@@ -87,9 +91,7 @@ const Side = styled.div`
 	width: 50%;
 	padding: 0 16px 0 0;
 
-	.blue {	color: ${ p => p.theme.blue }; }
-	.green {	color: ${ p => p.theme.green }; }
-	.pink {	color: ${ p => p.theme.pink }; }
+	h1, h2 { color: ${ p => p.theme.title }; }
 
 	img {
 		width: 90%;
@@ -115,6 +117,7 @@ const Bucket = styled.div`
 	padding-bottom: 20px;
 
 	h3 {
+		color: ${ p => p.color };
 		text-transform: uppercase;
 	}
 `

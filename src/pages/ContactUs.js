@@ -1,37 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import ContactForm from '../components/ContactForm'
 
-import { faq } from '../content'
+import { contactUs } from '../content'
 
-const FAQ = () => {
-	function renderBuckets() {
-		return faq.buckets.map((bucket, i) => {
-			return (
-				<Bucket key={ 'bucket' + i }>
-					<h3>{ bucket.title }</h3>
-					<p>{ bucket.text }</p>
-				</Bucket>
-			)
-		})
-	}
-
+const ContactUs = () => {
 	return (
 		<Container>
 			<Wrapper>
 				<Row>
-					<h1>{ faq.title }</h1>
+					<h1>{ contactUs.title }</h1>
 				</Row>
 				<Row>
-					<Buckets>
-						{ renderBuckets() }
-					</Buckets>
+					<Text>
+						{ contactUs.text }
+					</Text>
+				</Row>
+				<Row>					
+					<ContactForm
+						showMessage={ true }
+						textColor='blue'
+						templateID='template_e1p1led' />
 				</Row>
 			</Wrapper>
 		</Container>
 	)
 }
 
-export default FAQ
+export default ContactUs
 
 const Container = styled.div`
 	width: 100%;
@@ -57,15 +53,7 @@ const Row = styled.div`
 	}
 `
 
-const Buckets = styled.div`
-	width: 100%;
+const Text = styled.div`
 	max-width: 600px;
-`
-
-const Bucket = styled.div`
-	padding-bottom: 12px;
-
-	h3 {
-		color: ${ p => p.theme.title };
-	}
+	width: 100%;
 `

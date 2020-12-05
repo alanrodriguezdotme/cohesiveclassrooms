@@ -54,6 +54,41 @@ const aboutUs = {
 	]
 }
 
-const content = { homepageContent, aboutUs }
+export const faq = {
+	title: 'F.A.Q.',
+	buckets: [
+		{
+			title: 'Are these modules geared toward elementary or secondary?',
+			text: 'These modules are appropriate for teachers at levels K-12.'
+		},
+		{
+			title: 'Are these modules geared toward special education or general education?',
+			text: 'These modules discuss strategies that benefit all students and can be modified to meet the needs of a variety of student populations.'
+		},
+		{
+			title: 'Are these modules meant for remote learning or in person?',
+			text: 'These protocols are meant to support teacher practice in both in-person and with remote learning. While some practices are more applicable to one setting or the other, there are interventions and supports throughout these modules for both.'
+		},
+		{
+			title: 'How often can I watch the modules?',
+			text: 'You can watch the modules as often as you like over the course of your year long subscription.'
+		},
+		{
+			title: 'How do I access the workbook?',
+			text: 'The workbooks is a PDF file available for download when you register for the course.'
+		},
+		{
+			title: 'What are the coaching sessions like?',
+			text: 'The coaching sessions are twice per month and each session lasts one hour.  We view these sessions as opportunities to model opening activities that reflect the practices we are introducing in the modules, to problem solve classroom management and relationship building issues that you are encountering, and to network with other individuals in the Cohesive Classroom community.'
+		}
+	]
+}
+
+export const contactUs = {
+	title: 'Contact us',
+	text: 'Feel free to reach out with any questions you may have. We look forward to working with you.'
+}
+
+const content = { homepageContent, aboutUs, faq }
 
 export default content

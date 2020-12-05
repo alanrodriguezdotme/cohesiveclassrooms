@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import content from '../content'
+import { colors } from '../themes'
 
 const AboutUs = () => {
 	let { aboutUs } = content
@@ -10,10 +11,14 @@ const AboutUs = () => {
 		return aboutUs.bios.map((bio, i) => {
 			return (
 				<Side key={ 'bio' + i }>
-					<Photo className={ i % 2 === 0 ? "blueOverlay" : "pinkOverlay" }>
-						<img src={ "images/" + bio.image } />
+					<Photo 
+						colors={ colors } 
+						className={ i % 2 === 0 ? "blueOverlay" : "pinkOverlay" }>
+						<img alt={ bio.name } src={ "images/" + bio.image } />
 					</Photo>
-					<Title className={ i % 2 === 0 ? "blue" : "pink" }>
+					<Title 
+						colors={ colors } 
+						className={ i % 2 === 0 ? "blue" : "pink" }>
 						<h2>{ bio.title }</h2>
 						<h3>{ bio.subtitle }</h3>
 					</Title>
@@ -58,7 +63,7 @@ const Row = styled.div`
 	padding: 50px 0;
 
 	h1 {
-		color: ${ p => p.theme.blue };
+		color: ${ p => p.theme.title };
 		margin: 0;
 	}
 `
@@ -80,8 +85,8 @@ const Photo = styled.div`
 		
 	img { mix-blend-mode: luminosity; }
 
-	&.pinkOverlay {	background-color: ${ p => p.theme.pinkShade80 };	}
-	&.blueOverlay {	background-color: ${ p => p.theme.blueShade80 };	}
+	&.pinkOverlay {	background-color: ${ p => p.colors.pinkShade80 };	}
+	&.blueOverlay {	background-color: ${ p => p.colors.blueShade80 };	}
 `
 
 const Title = styled.div`
@@ -89,8 +94,8 @@ const Title = styled.div`
 	text-align: center;
 	margin: 30px 0;
 
-	&.blue { color: ${ p => p.theme.blue }; }
-	&.pink { color: ${ p => p.theme.pink }; }
+	&.blue { color: ${ p => p.colors.blue }; }
+	&.pink { color: ${ p => p.colors.pink }; }
 
 	h2 { margin: 0 0 8px 0; }
 	h3 { margin: 8px 0 0 0; }
