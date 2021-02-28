@@ -24,43 +24,54 @@ const Home = () => {
 		<Container>
 			<Wrapper>
 				<Row>
-					<Side>
-						<img alt="graduation cap" src={ "images/" + hero.image } />
-					</Side>
-					<Side>
-						<h1>{ hero.title }</h1>
-					</Side>
+					<Content>
+						<Side>
+							<Circle alt={ hero.imageAlt } image={ 'url("images/' + hero.image + '")' } />
+						</Side>
+						<Side>
+							<h1>{ hero.title }</h1>
+						</Side>
+					</Content>
 				</Row>
-				<Row>
-					<Side>
-						<h2>{ whatWeDo.title }</h2>
-						<Text>{ whatWeDo.text }</Text>
-					</Side>
-					<Side>
-						<img alt="presentation" src={ "images/" + whatWeDo.image } />
-					</Side>
+				{/* <Divider /> */}
+				<Row className="rowBgPink">
+					<Content>
+						<Side>
+							<h2>{ whatWeDo.title }</h2>
+							<Text>{ whatWeDo.text }</Text>
+						</Side>
+						<Side>
+							<img alt="presentation" src={ "images/" + whatWeDo.image } />
+						</Side>
+					</Content>
 				</Row>
+				{/* <Divider /> */}
 				<Row>
-					<Side>
-						<img alt="proactive, instructive, responsive circle" src={ "images/" + ourApproach.image } />
-					</Side>
-					<Side>
-						<h2 className="blue">{ ourApproach.title }</h2>
-						{ ourApproach.buckets && renderOurApproachBuckets(ourApproach.buckets) }
-					</Side>
+					<Content>
+						<Side>
+							<img alt="proactive, instructive, responsive circle" src={ "images/" + ourApproach.image } />
+						</Side>
+						<Side>
+							<h2 className="blue">{ ourApproach.title }</h2>
+							{ ourApproach.buckets && renderOurApproachBuckets(ourApproach.buckets) }
+						</Side>
+					</Content>
 				</Row>
-				<Row>
-					<Side>
-						<h2 className="blue">Find out more</h2>
-						<Text dangerouslySetInnerHTML={{ __html: findOutMore.innerHTML }} />
-						<img className="mail" alt="mail" src={ "images/" + findOutMore.image } />
-					</Side>
-					<Side>
-						<ContactForm
-							showMessage={ true }
-							textColor='blue'
-							templateID='template_e1p1led' />
-					</Side>
+				{/* <Divider /> */}
+				<Row className="rowBgBlue">
+					<Content>
+						<Side>
+							<h2 className="blue">Find out more</h2>
+							<Text dangerouslySetInnerHTML={{ __html: findOutMore.innerHTML }} />
+							<img className="mail" alt="mail" src={ "images/" + findOutMore.image } />
+						</Side>
+						<Side>
+							<ContactForm
+								showMessage={ true }
+								textColor='blue'
+								templateID='template_e1p1led' />
+						</Side>
+					</Content>
 				</Row>
 			</Wrapper>
 		</Container>
@@ -76,15 +87,31 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
 	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
 `
 
 const Row = styled.div`
 	width: 100%;
+
+	&.rowBgBlue {
+		background-color: ${ p => p.theme.rowBgBlue}
+	}
+
+	&.rowBgPink {
+		background-color: ${ p => p.theme.rowBgPink}
+	}
+
+	&.rowBgGreen {
+		background-color: ${ p => p.theme.rowBgGreen}
+	}
+`
+
+const Content = styled.div`
+	max-width: 960px;
+	padding: 50px 0;
 	display: flex;
 	align-items: center;
-	padding: 50px 0;
+	margin: 0 auto;
+
 `
 
 const Side = styled.div`
@@ -108,9 +135,18 @@ const Side = styled.div`
 	}
 `
 
+const Circle = styled.div`
+	background-image: ${ p => p.image };
+	height: 420px;
+	width: 420px;
+	border-radius: 210px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 18%;
+`
+
 const Text = styled.div`
-	font-size: 14px;
-	line-height: 22px;
+	color: ${ p => p.theme.color };
 `
 
 const Bucket = styled.div`
@@ -120,4 +156,13 @@ const Bucket = styled.div`
 		color: ${ p => p.color };
 		text-transform: uppercase;
 	}
+`
+
+const Divider = styled.div`
+	width: 100%;
+	height: 1px;
+	background-color: ${ p => p.theme.divider };
+	display: flex;
+	align-items: center;
+	margin: 50px 0;
 `

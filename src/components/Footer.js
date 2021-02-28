@@ -13,9 +13,9 @@ const Footer = () => {
 					<a href="mailto:info@cohesiveclassrooms.com">
 						<Envelope fill="blue" />
 					</a>
-					<a href="#">
+					{/* <a href="#">
 						<TwitterLogo fill="blue" />
-					</a>
+					</a> */}
 				</Right>
 			</Wrapper>
 		</Container>

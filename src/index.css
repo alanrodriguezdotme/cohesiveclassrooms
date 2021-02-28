@@ -6,7 +6,8 @@ body {
   margin: 0;
   font-family: Nunito;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 16px;
+  line-height: 26px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,9 +38,9 @@ code {
 
 h1 {
   font-family: Halant;
-  font-size: 64px;
+  font-size: 54px;
   font-weight: 700;
-  line-height: 72px;
+  line-height: 57px;
 }
 
 h2 {

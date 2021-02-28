@@ -1,7 +1,8 @@
 const homepageContent = {
 	hero: {
-		title: "Something inspiring that grabs your attention",
-		image: 'graduation-cap.svg'
+		title: "Cultivating classrooms where every child is seen, valued, and accepted",
+		image: 'colorful-hands-holding.jpg',
+		imageAlt: 'mural art of colorful hands holding'
 	},
 	whatWeDo: {
 		title: 'What we do',
@@ -47,9 +48,9 @@ const aboutUs = {
 		},
 		{
 			image: "maggie.png",
-			title: "Margaret Schulze",
+			title: "Maggie Schulze",
 			subtitle: "Ph.D., BCBA-D",
-			text: "Maggie has worked in the field of special education for many years in a variety of settings, including residential treatment, inpatient psychiatry and public schools, and has served in a variety of roles, as a paraprofessional, special education teacher and consultant. Maggie provides training and coaching to support the development of MTSS/PBIS systems and structures to schools throughout Washington state. She also supports school teams in creating sustainable and function-based support plans for students with challenging behaviors. She earned her doctorate in special education at the University of Washington, where she continues to mentor and teach special education pre-service teachers."
+			text: "Maggie Schulze, Ph.D., BCBA-D is an educational consultant focused on building Positive Behavior Intervention and Supports systems at Tiers 1, 2, and 3.  Dr. Schulze has worked in the field of education for 20 years in settings that include residential treatment facilities, inpatient psychiatry, and public schools, with a focus on preventing and managing challenging behavior for students with a range of needs.  Dr. Schulze received her doctorate from the University of Washington where her research centered on Implementation Science as it relates to the use of evidence-based practices for students with and without disabilities.  She also has served as a coach and instructor for pre-service special education teachers in teacher preparation program at the University of Washington.  Dr. Schulze has experience with many districts and schools in creating and maintaining frameworks that allow for implementation of evidence-based practices for students at each tier, including program evaluations for students with the most intensive needs."
 		}
 	]
 }

@@ -70,10 +70,10 @@ const Row = styled.div`
 
 const Side = styled.div`
 	width: 50%;
-	padding: 0 20px 0 0;
+	padding: 0 40px 0 0;
 
 	&:nth-child(even) {
-		padding: 0 0 0 20px;
+		padding: 0 0 0 40px;
 	}
 `
 
@@ -102,6 +102,5 @@ const Title = styled.div`
 `
 
 const Text = styled.div`
-	font-size: 14px;
-	line-height: 22px;
+	color: ${ p => p.theme.color };
 `

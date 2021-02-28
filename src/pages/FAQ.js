@@ -9,7 +9,7 @@ const FAQ = () => {
 			return (
 				<Bucket key={ 'bucket' + i }>
 					<h3>{ bucket.title }</h3>
-					<p>{ bucket.text }</p>
+					<Text>{ bucket.text }</Text>
 				</Bucket>
 			)
 		})
@@ -63,9 +63,13 @@ const Buckets = styled.div`
 `
 
 const Bucket = styled.div`
-	padding-bottom: 12px;
+	padding-bottom: 36px;
 
 	h3 {
 		color: ${ p => p.theme.title };
 	}
+`
+
+const Text = styled.div`
+	color: ${ p => p.theme.color };
 `

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
+
+import { ReactComponent as NewWindow } from '../icons/new-window.svg'
 import EmailCapture from './EmailCapture'
 
 const Header = () => {
@@ -25,9 +27,8 @@ const Header = () => {
 							rel="noreferrer" >
 							<span>
 								Courses & Coaching
-								<img 
-									className="new-window" 
-									src="icons/new-window.svg"
+								<NewWindow 
+									className="new-window"
 									alt="new window icon" />
 							</span>
 						</a>
@@ -126,14 +127,12 @@ const Navigation = styled.nav`
 
 		&:hover {
 			color: ${ p => p.theme.navLinkHover };
-
-			.new-window {
-				fill: ${ p => p.theme.navLinkHover };
-			}
+			.new-window {	fill: ${ p => p.theme.navLinkHover };	}
 		}
 
 		.new-window {
-			height: 10px;
+			height: 12px;
+			width: 12px;
 			margin-left: 4px;
 			fill: ${ p => p.theme.navLink };
 			transition: fill 200ms ease-in-out;

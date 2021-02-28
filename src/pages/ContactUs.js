@@ -56,4 +56,5 @@ const Row = styled.div`
 const Text = styled.div`
 	max-width: 600px;
 	width: 100%;
+	color: ${ p => p.theme.color };
 `

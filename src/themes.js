@@ -4,18 +4,40 @@ export const colors = {
 	yellow: '#E0E026',
 	orange: '#DE9221',
 	pink: '#E82376',
-	black: '#000',
+	black: '#333',
 	white: '#fff',
+	blueShade03: 'rgba(42, 50, 209, 0.03)',
 	blueShade50: 'rgba(42, 50, 209, 0.5)',
 	greenShade50: 'rgba(32, 214, 142, 0.5)',
+	pinkShade03: 'rgba(232, 35, 118, 0.03)',
 	pinkShade50: 'rgba(232, 35, 118, 0.5)',
+	pinkShade80: 'rgba(232, 35, 118, 0.8)',
+	blackShade03: 'rgba(0, 0, 0, 0.03)',
+	blackShade20: 'rgba(0, 0, 0, 0.2)',
+	blackShade50: 'rgba(0, 0, 0, 0.5)',
 	blackShade80: 'rgba(0, 0, 0, 0.8)',
 	blueShade80: 'rgba(42, 50, 209, 0.8)',
+	greenShade03: 'rgba(32, 214, 142, 0.03)',
 	greenShade80: 'rgba(32, 214, 142, 0.8)',
-	pinkShade80: 'rgba(232, 35, 118, 0.8)'
 }
 
-const { blue, pink, green, black, white, blueShade50, blackShade80, pinkShade50, greenShade50 } = colors
+const {
+	blue,
+	pink,
+	green,
+	black,
+	white,
+	blackShade03,
+	blackShade20,
+	blackShade50,
+	blackShade80,
+	blueShade03,
+	blueShade50,
+	pinkShade03,
+	pinkShade50,
+	greenShade03,
+	greenShade50,
+} = colors
 
 export const lightTheme = {
 	bg: white,
@@ -33,7 +55,10 @@ export const lightTheme = {
 	link: blue,
 	linkHover: green,
 	success: green,
-	error: pink
+	error: pink,
+	rowBgBlue: blueShade03,
+	rowBgPink: pinkShade03,
+	rowBgGreen: greenShade03
 }
 
 export const darkBlueTheme = {
@@ -52,7 +77,8 @@ export const darkBlueTheme = {
 	link: green,
 	linkHover: pink,
 	success: green,
-	error: pink
+	error: pink,
+	rowEvenBg: blackShade50
 }
 
 const themes = { lightTheme, darkBlueTheme }
