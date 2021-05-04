@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Arrow from '../components/Arrow'
 import ContactForm from '../components/ContactForm'
 
 import content from '../content'
@@ -7,7 +8,7 @@ import { colors } from '../themes'
 
 const Home = () => {
 	let { homepageContent } = content
-	let { hero, whatWeDo, ourApproach, findOutMore } = homepageContent
+	let { hero, whatWeDo, ourApproach, cohesiveClassroomsIs, findOutMore } = homepageContent
 
 	function renderOurApproachBuckets(buckets) {
 		return buckets.map((bucket, i) => {
@@ -56,20 +57,28 @@ const Home = () => {
 							{ ourApproach.buckets && renderOurApproachBuckets(ourApproach.buckets) }
 						</Side>
 					</Content>
+					<Content>
+						<Single>
+							<h2 className="blue">{cohesiveClassroomsIs.title}</h2>
+							<Text>{cohesiveClassroomsIs.text}</Text>
+							<Arrow />
+							{/* <img alt="detailed image about each module" src={ "images/" + cohesiveClassroomsIs.image } /> */}
+						</Single>
+					</Content>
 				</Row>
 				{/* <Divider /> */}
 				<Row className="rowBgBlue">
 					<Content>
 						<Side>
-							<h2 className="blue">Find out more</h2>
-							<Text dangerouslySetInnerHTML={{ __html: findOutMore.innerHTML }} />
-							<img className="mail" alt="mail" src={ "images/" + findOutMore.image } />
-						</Side>
-						<Side>
 							<ContactForm
 								showMessage={ true }
 								textColor='blue'
 								templateID='template_e1p1led' />
+						</Side>
+						<Side>
+							<h2 className="blue">Find out more</h2>
+							<Text dangerouslySetInnerHTML={{ __html: findOutMore.innerHTML }} />
+							<img className="mail" alt="mail" src={ "images/" + findOutMore.image } />
 						</Side>
 					</Content>
 				</Row>
@@ -111,7 +120,6 @@ const Content = styled.div`
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
-
 `
 
 const Side = styled.div`
@@ -132,6 +140,18 @@ const Side = styled.div`
 
 	&:nth-child(even) {
 		padding: 0 0 0 16px;
+	}
+`
+
+const Single = styled.div`
+	width: 100%;
+	padding: 0;
+
+	h1, h2 { color: ${ p => p.theme.title }; }
+
+	img {
+		width: 100%;
+		margin: 40px auto;
 	}
 `
 

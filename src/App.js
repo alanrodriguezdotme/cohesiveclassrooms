@@ -2,7 +2,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
 import { lightTheme } from './themes'
-import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './pages/Home'

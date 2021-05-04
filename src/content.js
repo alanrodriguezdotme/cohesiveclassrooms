@@ -1,3 +1,5 @@
+import {colors} from "./themes"
+
 const homepageContent = {
 	hero: {
 		title: "Cultivating classrooms where every child is seen, valued, and accepted",
@@ -29,6 +31,11 @@ const homepageContent = {
 				text: 'We take an responsive approach when we communicate and respond to students in ways which are mindful and respectful of who the student is personally, socially, academically, behaviorally, and linguistically to ensure we are providing the appropriate supports as needed.'
 			}
 		]
+	},
+	cohesiveClassroomsIs: {
+		title: 'Cohesive Classrooms is...',
+		image: 'arrow-modules.png',
+		text: 'A series of five comprehensive modules, focused on creating collaborative communities, that center on: student voice, connections, and fostering equitable and respectful environments.'
 	},
 	findOutMore: {
 		title: 'Find out more',
@@ -90,6 +97,34 @@ export const contactUs = {
 	text: 'Feel free to reach out with any questions you may have. We look forward to working with you.'
 }
 
-const content = { homepageContent, aboutUs, faq }
+export const arrow = [
+	{
+		title: "Building Social Relationships",
+		text: "Educator whole class relationships",
+		color: colors.orange
+	},
+	{
+		title: "Student Engagement",
+		text: "Getting student attention and maintainng engagement",
+		color: colors.pink
+	},
+	{
+		title: "Rules, Routines & Procedures",
+		text: "Strategies for teaching rules, routines & procedures",
+		color: colors.blue
+	},
+	{
+		title: "Community Circles",
+		text: "Building blocks for conducting classroom meetings",
+		color: colors.green
+	},
+	{
+		title: "Behavior Differentiation",
+		text: "Tier 1 behavior differentiation",
+		color: colors.yellow
+	},
+]
+
+const content = { homepageContent, aboutUs, faq, arrow }
 
 export default content
